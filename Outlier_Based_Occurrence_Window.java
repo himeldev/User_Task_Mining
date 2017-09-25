@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author Himel
+ * @author Himel Dev
  */
 import java.util.*;
 
@@ -45,7 +39,7 @@ public class Outlier_Based_Occurrence_Window {
             int position = -1;
             for(int i=0; i<pattern_length; i++)
             {
-                if(sequence.get(end)-pattern.get(i)==0)
+                if(sequence.get(end)-pattern.get(i) == 0)
                 {
                     position = i;
                     break;
@@ -70,9 +64,9 @@ public class Outlier_Based_Occurrence_Window {
             {
                 //System.out.println("Start: "+start+" "+end);
                 position = -1;
-                for(int i=0; i<pattern_length; i++)
+                for(int i = 0; i < pattern_length; i++)
                 {
-                    if(sequence.get(start)-pattern.get(i)==0)
+                    if(sequence.get(start)-pattern.get(i) == 0)
                         position = i;
                 }
 
@@ -80,13 +74,13 @@ public class Outlier_Based_Occurrence_Window {
                 {
                     start++;
                     
-                    if (position!=-1)
+                    if (position != -1)
                         pattern_element_tally[position]--;
                     else
                         outlier_count--;
                     
                     position = -1;
-                    for(int i=0; i<pattern_length; i++)
+                    for(int i = 0; i < pattern_length; i++)
                     {
                         if(sequence.get(start)-pattern.get(i)==0)
                             position = i;
