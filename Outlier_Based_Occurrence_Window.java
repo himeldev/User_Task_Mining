@@ -37,9 +37,9 @@ public class Outlier_Based_Occurrence_Window {
         {
             // Check if the last event of current window is a pattern element
             int position = -1;
-            for(int i=0; i<pattern_length; i++)
+            for(int i = 0; i< pattern_length; i++)
             {
-                if(sequence.get(end)-pattern.get(i) == 0)
+                if(sequence.get(end) - pattern.get(i) == 0)
                 {
                     position = i;
                     break;
@@ -66,7 +66,7 @@ public class Outlier_Based_Occurrence_Window {
                 position = -1;
                 for(int i = 0; i < pattern_length; i++)
                 {
-                    if(sequence.get(start)-pattern.get(i) == 0)
+                    if(sequence.get(start) - pattern.get(i) == 0)
                         position = i;
                 }
 
@@ -82,7 +82,7 @@ public class Outlier_Based_Occurrence_Window {
                     position = -1;
                     for(int i = 0; i < pattern_length; i++)
                     {
-                        if(sequence.get(start)-pattern.get(i)==0)
+                        if(sequence.get(start) - pattern.get(i)==0)
                             position = i;
                     }
                 }
@@ -97,7 +97,8 @@ public class Outlier_Based_Occurrence_Window {
         }
         int ret[] = new int[4];
         
-        if(member_count == pattern_length) ret[0] = 1;
+        if(member_count == pattern_length) 
+            ret[0] = 1;
         else 
             ret[0] = 0;
         
@@ -110,4 +111,3 @@ public class Outlier_Based_Occurrence_Window {
     }
     
 }
-    
