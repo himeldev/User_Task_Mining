@@ -4,12 +4,10 @@
  */
 import java.util.*;
 
-public class Outlier_Based_Occurrence_Window {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+public class Outlier_Based_Occurrence_Window 
+{
+    public static void main(String[] args) 
+    {
         Outlier_Based_Occurrence_Window instance = new Outlier_Based_Occurrence_Window();
         ArrayList<Integer> example_sequence = new ArrayList<>(Arrays.asList(1, 1, 2, 4, 5, 3, 2, 5, 2, 1));
         ArrayList<Integer> example_pattern = new ArrayList<>(Arrays.asList(1, 2, 3));
@@ -106,8 +104,6 @@ public class Outlier_Based_Occurrence_Window {
         ret[2] = window_end;
         ret[3] = minimum_outlier_count;
         
-        return ret;
-        
-    }
-    
+        return ret;        
+    }    
 }
